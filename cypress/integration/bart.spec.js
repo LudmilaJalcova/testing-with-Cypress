@@ -1,8 +1,5 @@
-# testing-with-Cypress
 
-## Testovanie formulára pri defaltnom nastavení:
 
-```js
 describe('Testing bart contact form default view', () => {
  
   it('Testing modal default view', () => {
@@ -110,7 +107,6 @@ describe('Testing bart contact form default view', () => {
       .should('have.attr', 'type', 'checkbox')
       .should('have.attr', 'name', 'interest[elektronicky-obchod]')
       .should('have.attr', 'value', 'Elektronický obchod'); 
-
    
     cy.get('#form-group-interest label:nth-child(14) input')
       .should('have.attr', 'type', 'checkbox')
@@ -139,10 +135,7 @@ describe('Testing bart contact form default view', () => {
       .not('have.text', 'Opíšte prosím svoj projekt');
   });
 });
-```
-## Testovanie formulára so zobrazenými errorovými hláškami:
 
-```js
 describe('Testing bart contact form visible errors', () => {
   
   it('Testing modal not visible', () => {
@@ -197,12 +190,9 @@ describe('Testing bart contact form visible errors', () => {
       .should('have.text', 'Opíšte prosím svoj projekt');
   });
 });
-```
-## Testovanie vyplneného formulára so skrytými erorovými hláškami:
 
-```js
-describe.only('Testing bart not visible errors hint after fill contact form', () => {
-  
+describe('Testing bart not visible errors hint after fill contact form', () => {
+    
   it('Testing modal not visible', () => {
     cy.visit('https://www.bart.sk/mam-zaujem-test');
     cy.get('#contact-submit').click();
@@ -274,12 +264,8 @@ describe.only('Testing bart not visible errors hint after fill contact form', ()
       .not('have.text', 'Opíšte prosím svoj projekt');
   });
 
-```
-
-## Testovanie potvrdzujúcej správy:
-
-```js
- afterEach('Testing bart visible modal',async () => {
+  
+    afterEach('Testing bart visible modal',async () => {
         cy.get('#contact-submit').click()
 
     cy.get('#modal-overlay-contact-us')
@@ -299,11 +285,10 @@ describe.only('Testing bart not visible errors hint after fill contact form', ()
     );
   });
 });
-```
 
-## Testovanie formulára pri defaltnom nastavení v anglickom jazyku:
 
-```js
+
+
 describe('Testing bart contact form default view', () => {
   
   it('Testing modal default view', () => {
@@ -442,11 +427,7 @@ describe('Testing bart contact form default view', () => {
       .not('have.text', 'Opíšte prosím svoj projekt');
   });
 });
-```
 
-## Testovanie formulára so zobrazenými errorovými hláškami v anglickom jazyku:
-
-```js
 describe('Testing bart contact form visible errors', () => {
   
   it('Testing modal not visible', () => {
@@ -501,13 +482,9 @@ describe('Testing bart contact form visible errors', () => {
       .should('have.text', 'Opíšte prosím svoj projekt');
   });
 });
-```
 
-## Testovanie vyplneného formulára so skrytými errorovými hláškami v anglickom jazyku:
-
-```js
 describe('Testing bart not visible errors hint after fill contact form', () => {
-  
+ 
     it('Testing modal not visible', () => {
       cy.visit('https://www.bart.sk/en/interested-in');
       cy.get('#contact-submit').click();
@@ -578,12 +555,9 @@ describe('Testing bart not visible errors hint after fill contact form', () => {
       .not('have.class', 'error-text')
       .not('have.text', 'Opíšte prosím svoj projekt');
   });
-```
 
-## Testovanie potvrdzujúcej správy v anglickom jazyku:
-
-```js
-     afterEach('Testing bart visible modal', async () => {
+  
+    afterEach('Testing bart visible modal', async () => {
         cy.get('#contact-submit').click();
 
     cy.get('#modal-overlay-contact-us')
@@ -603,4 +577,15 @@ describe('Testing bart not visible errors hint after fill contact form', () => {
     );
   });
 });
-```
+
+
+
+
+
+
+    
+
+
+
+
+    

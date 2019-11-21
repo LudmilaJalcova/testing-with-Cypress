@@ -1,0 +1,26 @@
+{
+  "name": "testing-with-cypress",
+  "version": "1.0.0",
+  "description": "## Testovanie formulára pri defaltnom nastavení:",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^3.6.0"
+  },
+  "scripts": {
+    "test:e2e": "cypress run --spec cypress/integration/bart.spec.js toConsole=true",
+    "test:e2e:bart": "cypress run --spec cypress/integration/bart.spec.js --reporter junit --reporter-options mochaFile=results/my-test-output.xml,toConsole=true",
+    "test:e2e:bart:watch": "cypress run --spec cypress/integration/bart.spec.js --headed --no-exit --config pageLoadTimeout=600000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LudmilaJalcova/testing-with-Cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LudmilaJalcova/testing-with-Cypress/issues"
+  },
+  "homepage": "https://github.com/LudmilaJalcova/testing-with-Cypress#readme",
+  "dependencies": {}
+}
