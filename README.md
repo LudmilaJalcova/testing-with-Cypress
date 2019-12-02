@@ -1,4 +1,4 @@
-# testing-with-Cypress
+# testing-with-cypress
 
 ## Testovanie formulára pri defaltnom nastavení:
 
